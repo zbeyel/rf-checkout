@@ -5,11 +5,12 @@ function IssueSubmission() {
   return (
     <div>
       <FormGroup>
+        <Form.Label>Check all that apply</Form.Label>
         <Form.Check type="checkbox" label="Unresponsive"></Form.Check>
         <Form.Check type="checkbox" label="Unresponsive"></Form.Check>
         <Form.Check type="checkbox" label="Unresponsive"></Form.Check>
         <Form.Check type="checkbox" label="Unresponsive"></Form.Check>
-        <br></br>
+        <br />
         <Form.Label>Extra Notes:</Form.Label>
         <Form.Control as="textarea" rows={3}></Form.Control>
         <br />

@@ -7,9 +7,9 @@ function LandingPage() {
     <div>
       <InputGroup>
         <FormControl placeholder="Badge Number"></FormControl>{" "}
-        <Button>
-          <Link to="/Available_units">Submit</Link>
-        </Button>
+        <Link to="/Available_units">
+          <Button>Submit</Button>
+        </Link>
       </InputGroup>
     </div>
   );
