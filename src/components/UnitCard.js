@@ -2,20 +2,27 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function UnitCard({ status }) {
+function UnitCard({
+  status,
+  unitNumber = "Unit Number",
+  unitType = "Unit Type",
+}) {
   return (
     <>
       <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Img></Card.Img>
-          <Card.Title>Unit number </Card.Title>
-          <Card.Text>Unit type</Card.Text>
+          <Card.Title>{unitNumber}</Card.Title>
+          <Card.Text>{unitType}</Card.Text>
           <Link to="/">
-            {status ? (
-              <Button>Check out</Button>
-            ) : (
-              <Button disabled>Check out</Button>
-            )}
+            {
+              //Toggles whether the equipment is available for checkout
+              status ? (
+                <Button>Check out</Button>
+              ) : (
+                <Button disabled>Check out</Button>
+              )
+            }
           </Link>
           <Link to="/issues">
             <Button variant="danger">Submit Issue</Button>
