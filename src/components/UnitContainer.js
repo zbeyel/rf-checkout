@@ -7,10 +7,10 @@ function UnitContainer() {
     <>
       <Row>
         <Col>
-          <UnitCard></UnitCard>
+          <UnitCard status={true} />
         </Col>
         <Col>
-          <UnitCard></UnitCard>
+          <UnitCard status={false} />
         </Col>
       </Row>
     </>
