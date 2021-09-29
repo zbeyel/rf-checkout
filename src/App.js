@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import UnitContainer from "./components/UnitContainer";
 import LandingPage from "./components/LandingPage";
 import IssueSubmission from "./components/IssueSubmission";
+import AdminPanel from "./components/AdminPanel";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" exact component={LandingPage}></Route>
         <Route path="/available_units" exact component={UnitContainer}></Route>
         <Route path="/issues" component={IssueSubmission} />
+        <Route path="/admin" component={AdminPanel} />
       </Switch>
     </BrowserRouter>
   );
