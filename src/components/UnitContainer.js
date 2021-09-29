@@ -7,7 +7,7 @@ function UnitContainer() {
     <>
       <Row>
         <Col>
-          <UnitCard status={true} />
+          <UnitCard status={true} unitType="MC3031" unitNumber="57HH" />
         </Col>
         <Col>
           <UnitCard status={false} />
