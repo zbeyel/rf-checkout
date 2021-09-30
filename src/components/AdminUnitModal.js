@@ -16,14 +16,14 @@ function AdminUnitModal() {
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal Heading</Modal.Title>
+          <Modal.Title>Unit Management</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Dolore non minim ut voluptate cillum et est id dolor commodo. Irure
-          duis excepteur quis irure dolore. Cillum adipisicing exercitation
-          nostrud adipisicing esse dolor amet proident nisi sint. Enim ullamco
-          ea voluptate aliquip ullamco dolore mollit deserunt ad voluptate.
-          Minim ipsum nostrud Lorem exercitation.
+          Unit #: <br />
+          Unit Type: <br />
+          Reported Issue: <br />
+          Notes: <br />
+          Status:
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
