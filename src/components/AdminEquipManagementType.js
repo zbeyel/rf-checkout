@@ -1,5 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import AdminEquipManagementSingle from "./AdminEquipManagementSingle";
 
 function AdminEquipManagementType() {
   return (
@@ -13,22 +14,30 @@ function AdminEquipManagementType() {
       </thead>
       <tbody>
         <tr>
-          <td>Button</td>
+          <td>
+            <AdminEquipManagementSingle></AdminEquipManagementSingle>
+          </td>
           <td>57HH</td>
           <td>Out for repair</td>
         </tr>
         <tr>
-          <td>Button</td>
+          <td>
+            <AdminEquipManagementSingle></AdminEquipManagementSingle>
+          </td>
           <td>57HH</td>
-          <td>Out for repair</td>
+          <td>Okay</td>
         </tr>
         <tr>
-          <td>Button</td>
+          <td>
+            <AdminEquipManagementSingle></AdminEquipManagementSingle>
+          </td>
           <td>57HH</td>
-          <td>Out for repair</td>
+          <td>Okay</td>
         </tr>
         <tr>
-          <td>Button</td>
+          <td>
+            <AdminEquipManagementSingle></AdminEquipManagementSingle>
+          </td>
           <td>57HH</td>
           <td>Out for repair</td>
         </tr>

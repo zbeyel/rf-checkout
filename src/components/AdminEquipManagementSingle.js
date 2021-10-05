@@ -10,14 +10,20 @@ function AdminEquipManagementSingle() {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        View
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Unit Management</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          Unit #: <br />
+          Unit Type: <br />
+          Reported Issue: <br />
+          Notes: <br />
+          Status: <br></br>History: Accordion here
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

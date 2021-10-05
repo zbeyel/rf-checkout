@@ -5,7 +5,6 @@ import AdminUnitModal from "./AdminUnitModal";
 function AdminIssuesOverview() {
   return (
     <div>
-      Outstanding issues:
       <Table striped bordered hover responsive>
         <thead>
           <tr>

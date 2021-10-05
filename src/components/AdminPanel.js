@@ -18,6 +18,17 @@ function AdminPanel() {
           <AdminIssuesOverview></AdminIssuesOverview>
         </Accordion.Body>
       </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>
+          Equipment checked out more than 12hrs
+        </Accordion.Header>
+        <Accordion.Body>
+          table with: <br />
+          - equipment checkout out for over 12 hrs <br />
+          - who checked out
+          <br />- timestamp from checkout
+        </Accordion.Body>
+      </Accordion.Item>
     </Accordion>
   );
 }
