@@ -17,10 +17,11 @@ function UnitCard({
           <Link to="/">
             {
               //Toggles whether the equipment is available for checkout
+              // TODO add return equipment funtion when clicked for disabled button
               status ? (
                 <Button>Check out</Button>
               ) : (
-                <Button disabled>Check out</Button>
+                <Button disabled>Return</Button>
               )
             }
           </Link>

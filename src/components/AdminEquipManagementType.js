@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import AdminEquipManagementSingle from "./AdminEquipManagementSingle";
 
-function AdminEquipManagementType() {
+function AdminEquipManagementType({ unitType }) {
   return (
     <Table striped bordered hover responsive>
       <thead>
@@ -17,28 +17,28 @@ function AdminEquipManagementType() {
           <td>
             <AdminEquipManagementSingle></AdminEquipManagementSingle>
           </td>
-          <td>57HH</td>
+          <td>{`57${unitType}`}</td>
           <td>Out for repair</td>
         </tr>
         <tr>
           <td>
             <AdminEquipManagementSingle></AdminEquipManagementSingle>
           </td>
-          <td>57HH</td>
+          <td>{`57${unitType}`}</td>
           <td>Okay</td>
         </tr>
         <tr>
           <td>
             <AdminEquipManagementSingle></AdminEquipManagementSingle>
           </td>
-          <td>57HH</td>
+          <td>{`57${unitType}`}</td>
           <td>Okay</td>
         </tr>
         <tr>
           <td>
             <AdminEquipManagementSingle></AdminEquipManagementSingle>
           </td>
-          <td>57HH</td>
+          <td>{`57${unitType}`}</td>
           <td>Out for repair</td>
         </tr>
       </tbody>
