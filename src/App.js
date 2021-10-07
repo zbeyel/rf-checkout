@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import UnitContainer from "./components/UnitContainer";
 import LandingPage from "./components/LandingPage";
 import IssueSubmission from "./components/IssueSubmission";
-import AdminPanel from "./components/AdminPanel";
+import AdminPanel from "./components/admin/AdminPanel";
 function App() {
   return (
     <BrowserRouter>
