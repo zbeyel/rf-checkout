@@ -27,9 +27,23 @@ const deleteUserByBadgeNumber = async (badge_number) => {
 };
 
 //HARDWARE Database Functions
-//TODO Add equipment functions
-//TODO Remove equipment functions
+const createHardware = async (hardwareObject) => {
+  let { unit_name, unit_type, assigned_user, status } = hardwareObject;
+  let newHardware = new Hardware({
+    unit_name,
+    unit_type,
+    assigned_user,
+    status,
+  });
+  await newHardware.save();
+};
+
+const deleteHardwareByUnitNumber = async (unit_number) => {
+  await Hardware.deleteOne({ unit_number });
+};
+
 //TODO Edit equipment functions
+
 //TODO Delete equipment functions
 
 //ISSUE Functions
