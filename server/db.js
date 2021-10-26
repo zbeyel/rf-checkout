@@ -42,9 +42,14 @@ const deleteHardwareByUnitNumber = async (unit_number) => {
   await Hardware.deleteOne({ unit_number });
 };
 
-//TODO Edit equipment functions
+const updateHardware = async (unit_number, updateToBeApplied) => {
+  await Hardware.updateOne({ unit_number }, updateToBeApplied);
+};
 
-//TODO Delete equipment functions
+const findHardwareByUnitNumber = async (unit_number) => {
+  let res = await Hardware.where({ unit_number });
+  return res;
+};
 
 //ISSUE Functions
 //TODO Add issue query
