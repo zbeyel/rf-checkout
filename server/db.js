@@ -1,36 +1,22 @@
-const mongoose = require("mongoose");
-// const { Schema } = mongoose;
+const { Users } = require("./models.js");
 
-mongoose.connect("mongodb://localhost:27017/rf-checkout");
+const createUser = (userObject) => {
+  let { badge_number, employee_id, first_name, last_name } = userObject;
+  let newUser = new Users({
+    badge_number,
+    employee_id,
+    first_name,
+    last_name,
+  });
+  newUser.save().then(() => console.log("addition complete"));
+};
 
-const Units = mongoose.model("units", {
-  unit_name: String,
-  unit_type: String,
-  assigned_user: Number,
-  status: String,
-});
+const findUserByBadgeNumber = async (badge_number) => {
+  const query = await Users.where({ badge_number });
+  return query;
+};
 
-const Users = mongoose.model("users", {
-  badge_number: Number,
-  employee_id: Number,
-  first_name: String,
-  last_name: String,
-});
-
-const Issues = mongoose.model("issue_log", {
-  keypad: Boolean,
-  notes: String,
-  other: Boolean,
-  screen: Boolean,
-  unit_number: String,
-  unresponsive: Boolean,
-});
-
-const users = new Users({
-  badge_number: 9105,
-  employee_id: 101661,
-  first_name: "Zach",
-  last_name: "Beyel",
-});
-
-users.save().then(() => console.log("meow"));
+const updateUserByBadgeNumber = async (badge_number, updateToBeApplied) => {
+  // updateToBeApplied is an object that will be replacing data in the found document
+  await Users.updateOne({ badge_number }, updateToBeApplied);
+};
