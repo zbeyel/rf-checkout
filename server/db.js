@@ -1,4 +1,4 @@
-const { Users, Hardware } = require("./models.js");
+const { Users, Hardware, Issues } = require("./models.js");
 
 //USER Database Functions
 const createUser = (userObject) => {
@@ -52,9 +52,52 @@ const findHardwareByUnitNumber = async (unit_number) => {
 };
 
 //ISSUE Functions
-//TODO Add issue query
-//TODO update existing issue query
-//TODO delete existing issue query
+const createIssue = async (issueObject) => {
+  let {
+    keypad,
+    notes,
+    other,
+    screen,
+    unit_number,
+    unit_type,
+    unresponsive,
+    status,
+  } = issueObject;
+  let newIssue = new Issues({
+    keypad,
+    notes,
+    other,
+    screen,
+    unit_number,
+    unit_type,
+    unresponsive,
+    status,
+  });
+  await newIssue.save();
+};
+
+const updateIssue = async (_id, updateToBeApplied) => {
+  await Issues.updateOne({ _id }, updateToBeApplied);
+};
+
+const deleteIssueByID = async (_id) => {
+  await Issues.deleteOne({ _id });
+};
+
+const findIssueByID = async (_id) => {
+  let res = await Issues.where({ _id });
+  return res;
+};
+
+const findIssueByStatus = async (status) => {
+  let res = await Issues.where({ status });
+  return res;
+};
+
+const findIssuesByHardware = async (status, unit_number) => {
+  let res = await Issues.where({ unit_number, status });
+  return res;
+};
 
 //CheckoutLog functions
 //TODO Check Out equipment functions
