@@ -29,7 +29,7 @@ const issueSchema = new Schema({
 });
 
 const checkoutSchema = new Schema({
-  unit: String,
+  unit_number: String,
   date_in: Date,
   date_out: Date,
 });

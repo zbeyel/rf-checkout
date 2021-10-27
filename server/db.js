@@ -1,4 +1,4 @@
-const { Users, Hardware, Issues } = require("./models.js");
+const { Users, Hardware, Issues, Checkout } = require("./models.js");
 
 //USER Database Functions
 const createUser = (userObject) => {
@@ -100,6 +100,16 @@ const findIssuesByHardware = async (status, unit_number) => {
 };
 
 //CheckoutLog functions
-//TODO Check Out equipment functions
-//TODO Check In equipment functions
-//TODO Check out history functions
+const checkOutEquipment = async (unit_number, date_out) => {
+  let newCheckout = await Checkout({ unit_number, date_out, date_in: null });
+  await newCheckout.save();
+};
+
+const checkInEquipment = async (unit_number, date_in) => {
+  await Checkout.updateOne({ date_in: null, unit_number }, date_in);
+};
+
+const findCheckoutByHardware = async (unit_number) => {
+  let res = await Checkout.where({ unit_number });
+  return res;
+};
