@@ -25,10 +25,11 @@ const issueSchema = new Schema({
   screen: Boolean,
   unit_number: String,
   unresponsive: Boolean,
+  status: String,
 });
 
 const checkoutSchema = new Schema({
-  unit: String,
+  unit_number: String,
   date_in: Date,
   date_out: Date,
 });
